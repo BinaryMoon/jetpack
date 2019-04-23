@@ -326,14 +326,7 @@ export default connect(
 			rewindStatus: getRewindStatus( state ),
 		};
 	},
-	dispatch => ( {
-		setInitialState: () => {
-			return dispatch( setInitialState() );
-		},
-		clearUnsavedSettingsFlag: () => {
-			return dispatch( clearUnsavedSettingsFlag() );
-		},
-	} )
+	{ clearUnsavedSettingsFlag, setInitialState }
 )( withRouter( Main ) );
 
 /**
